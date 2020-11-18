@@ -7,5 +7,13 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+
+    <% messages.map((message)=>{ %>
+      <p><%=message.text%> - <%=message.user%> - <%=message.added.toDateString()%></p>
+    <% }) %> 
+
+    <a href="/new">New message</a>
+  
   </body>
 </html>
